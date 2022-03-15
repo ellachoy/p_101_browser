@@ -23,9 +23,11 @@
         // window.addEventListner('resize',()=> {
         //   console.log('resize');
         // })
-        window.addEventListner('resize', event => {
-          console.log('resize');
-        })
+        window.addEventListner('resize', () => {
+        //   console.log('resize');
+        console.log(
+            `window.screen: ${window.screen.width}, ${window.screen.height}`);
+        });
     </script>
 </body>
 </html>
