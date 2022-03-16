@@ -20,13 +20,17 @@
     <!-- div.tag -->
     <div class="tag">Window Size</div>
     <script>
-        // window.addEventListner('resize',()=> {
+        // window.addEventListner('resize',function (){
         //   console.log('resize');
         // })
-        window.addEventListner('resize', () => {
+        window.addEventListener('resize', () => {
         //   console.log('resize');
         console.log(
             `window.screen: ${window.screen.width}, ${window.screen.height}`);
+        console.log(
+        `window.outer: ${window.outerWidth}, ${window.outerHeight}`);
+        console.log(
+        `documentElement.clientWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`);
         });
     </script>
 </body>
