@@ -10,6 +10,7 @@
     body{
         background-color: #000000;
         /* overflow: hidden; 스크롤이 않되게 만드려면  */
+        
     }
     div{
         width:50px;
@@ -29,7 +30,7 @@
         <li><a href="/index.html">go to Home</a></li>
     </ul>
    
-    <div></div>
+    <div>*</div>
     <div></div>
     <div></div>
     <div></div>
@@ -40,7 +41,14 @@
     <div></div>
     <div></div> 
     <script>
-        
+      const special= document.querySelector('.special')
+    //   event => function(event){}
+      special.addEventListener('click', event =>{ 
+          const rect = special.getBoundingClientRect();
+          console.log(rect)
+          console.log(`client:${event.clientX},${event.clientY}`);
+          console.log(`page:${event.pageX},${event.pageY}`);
+      });
     </script>
    
 </body>
